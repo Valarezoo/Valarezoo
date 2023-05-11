@@ -1,0 +1,65 @@
+class Medico {
+  private nombre: string;
+  private especialidad: string;
+  private experiencia: number;
+  private salario: number;
+
+  constructor(nombre: string = '', especialidad: string = '', experiencia: number = 0, salario: number = 0.0) {
+    this.nombre = nombre;
+    this.especialidad = especialidad;
+    this.experiencia = experiencia;
+    this.salario = salario;
+  }
+
+  public getNombre(): string {
+    return this.nombre;
+  }
+
+  public setNombre(nombre: string): void {
+    this.nombre = nombre;
+  }
+
+  public getEspecialidad(): string {
+    return this.especialidad;
+  }
+
+  public setEspecialidad(especialidad: string): void {
+    this.especialidad = especialidad;
+  }
+
+  public getExperiencia(): number {
+    return this.experiencia;
+  }
+
+  public setExperiencia(experiencia: number): void {
+    this.experiencia = experiencia;
+  }
+
+  public getSalario(): number {
+    return this.salario;
+  }
+
+  public setSalario(salario: number): void {
+    this.salario = salario;
+  }
+
+  public getInformacion(): string {
+    return `Nombre: ${this.nombre}\nEspecialidad: ${this.especialidad}\nExperiencia: ${this.experiencia} años\nSalario: $${this.salario}`;
+  }
+}
+
+// Programa principal
+let medico1 = new Medico();
+medico1.setNombre("Dr. Kristian Valarezo");
+medico1.setEspecialidad("Pediatra");
+medico1.setExperiencia(7);
+medico1.setSalario(7000.0);
+
+let medico2 = new Medico("Dra. Liseth Bodero");
+medico2.setEspecialidad("Neurologa")
+medico2.setExperiencia(5);
+medico2.setSalario(5600.0);
+
+console.log(medico1.getInformacion());
+console.log("\n");
+console.log(medico2.getInformacion());
